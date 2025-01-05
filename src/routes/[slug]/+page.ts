@@ -14,63 +14,51 @@ import type { PageLoad } from './$types';
 const posts = [
 	{
 		slug: 'hello-world',
-		content: helloWorld,
-		prev: '/',
-		next: '/variable'
+		content: helloWorld
 	},
 	{
 		slug: 'variable',
-		content: variable,
-		prev: '/hello-world',
-		next: '/conditional'
+		content: variable
 	},
 	{
 		slug: 'conditional',
-		content: conditional,
-		prev: '/variable',
-		next: '/while-loop'
+		content: conditional
 	},
 	{
 		slug: 'while-loop',
-		content: whileLoop,
-		prev: '/conditional',
-		next: '/array'
+		content: whileLoop
 	},
 	{
 		slug: 'array',
-		content: array,
-		prev: '/while-loop',
-		next: '/each-loop'
+		content: array
 	},
 	{
 		slug: 'each-loop',
-		content: eachLoop,
-		prev: '/array',
-		next: '/function'
+		content: eachLoop
 	},
 	{
 		slug: 'function',
-		content: fn,
-		prev: '/each-loop',
-		next: '/function-advanced'
+		content: fn
 	},
 	{
 		slug: 'function-advanced',
-		content: fnAdvanced,
-		prev: '/function'
+		content: fnAdvanced
 	}
 ];
 
 export const load: PageLoad = async ({ params }) => {
-	const post = posts.find((p) => p.slug === params.slug);
-	if (!post) {
+	const i = posts.findIndex((p) => p.slug === params.slug);
+	if (i < 0) {
 		return error(404, await marked.parse(notFound));
 	}
 
+	const prev = i > 0 ? posts[i - 1].slug : '/';
+	const next = i < posts.length - 1 ? posts[i + 1].slug : undefined;
+
 	return {
-		slug: post.slug,
-		content: await marked.parse(post.content),
-		prev: post.prev,
-		next: post.next
+		slug: posts[i].slug,
+		content: await marked.parse(posts[i].content),
+		prev,
+		next
 	};
 };
