@@ -11,10 +11,10 @@
 			{#if prev}
 				<a
 					href={prev}
-					class="flex select-none items-center gap-2 rounded border-2 border-red-700
-						p-2 pr-4 text-red-600 transition-colors hover:bg-red-700 hover:text-red-100"
+					class="flex select-none items-center gap-2 rounded p-2
+						pr-4 text-white transition-colors hover:text-red-500"
 				>
-					<ChevronLeft />
+					<ChevronLeft size={20} />
 					Prev
 				</a>
 			{/if}
@@ -22,9 +22,8 @@
 			{#if next}
 				<a
 					href={next}
-					class="ml-auto flex select-none items-center gap-2 rounded border-2
-						border-red-700 p-2 pl-4 text-red-600 transition-colors hover:bg-red-700
-						hover:text-red-100"
+					class="ml-auto flex select-none items-center gap-2 rounded p-2 pl-4
+						text-white transition-colors hover:text-red-500"
 				>
 					Next
 					<ChevronRight />
