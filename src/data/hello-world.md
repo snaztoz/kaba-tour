@@ -11,5 +11,5 @@ fn main() {
 To print a value on the screen, we can use the `debug` statement:
 
 ```text
-debug "Hello, World!"
+debug "Hello, World!";
 ```
