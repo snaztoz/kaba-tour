@@ -1,0 +1,12 @@
+fn main() {
+    var arr = [int 1, 2, 3];
+
+    arr[0] += 10;
+    debug arr[0];
+
+    arr[2] = 5;
+    debug arr[2];
+
+    var i = 1;
+    debug arr[i];
+}

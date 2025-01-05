@@ -2,6 +2,9 @@
 	import { EditorState } from '@codemirror/state';
 	import { EditorView, gutter, keymap, lineNumbers } from '@codemirror/view';
 	import { defaultKeymap, indentWithTab } from '@codemirror/commands';
+	import { indentUnit } from '@codemirror/language';
+
+	let { initialCode }: { initialCode: string } = $props();
 
 	let editor: HTMLDivElement;
 	let view: EditorView;
@@ -15,7 +18,10 @@
 				color: '#a3a3a3'
 			},
 			'.cm-scroller': {
-				lineHeight: '24px'
+				fontFamily:
+					'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
+				lineHeight: '24px',
+				overflowY: 'auto'
 			},
 			'.cm-gutters': {
 				backgroundColor: '#171717',
@@ -26,22 +32,31 @@
 			'& .cm-lineNumbers .cm-gutterElement': {
 				minWidth: '3rem',
 				paddingLeft: '0.75rem',
-				paddingRight: '0.75rem'
+				paddingRight: '0.75rem',
+				userSelect: 'none'
 			}
 		},
 		{ dark: true }
 	);
 
-	let startState = EditorState.create({
-		doc: 'Hello World',
-		extensions: [theme, lineNumbers(), gutter({}), keymap.of([...defaultKeymap, indentWithTab])]
-	});
-
 	$effect(() => {
+		let startState = EditorState.create({
+			doc: initialCode,
+			extensions: [
+				theme,
+				lineNumbers(),
+				gutter({}),
+				indentUnit.of('    '),
+				keymap.of([...defaultKeymap, indentWithTab])
+			]
+		});
+
 		view = new EditorView({
 			state: startState,
 			parent: editor
 		});
+
+		return () => view.destroy();
 	});
 </script>
 

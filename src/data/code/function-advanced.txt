@@ -1,0 +1,18 @@
+fn main() {
+    var yielders = [() -> int
+        get_two,
+        get_three,
+    ];
+
+    each yield in yielders {
+        debug yield();
+    }
+}
+
+fn get_two(): int {
+    return 2;
+}
+
+fn get_three(): int {
+    return 3;
+}

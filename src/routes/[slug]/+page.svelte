@@ -5,7 +5,7 @@
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
-	let { content, prev, next } = $derived(data);
+	let { content, code, prev, next } = $derived(data);
 </script>
 
 <main
@@ -16,8 +16,10 @@
 		<TextPanel {content} {prev} {next} />
 	</div>
 
-	<div class="relative flex h-1/2 flex-col md:h-full md:w-1/2">
-		<CodePanel />
+	<div class="relative h-1/2 md:h-full md:w-1/2">
+		<div class="flex h-full flex-col overflow-y-auto">
+			<CodePanel initialCode={code} />
+		</div>
 		<ResultPanel />
 	</div>
 </main>
