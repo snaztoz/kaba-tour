@@ -4,14 +4,14 @@
 </script>
 
 <main
-	class="flex h-full w-full flex-col divide-y divide-slate-200 md:flex-row
+	class="flex h-full w-full flex-col divide-y divide-neutral-700 md:flex-row
     md:divide-x md:divide-y-0"
 >
 	<div class="h-1/2 md:h-full md:w-1/2">
 		<TextPanel content={page.error!.message} />
 	</div>
 
-	<div class="flex h-1/2 flex-col divide-y divide-slate-200 md:h-full md:w-1/2">
+	<div class="flex h-1/2 flex-col divide-y divide-neutral-700 md:h-full md:w-1/2">
 		<section></section>
 	</div>
 </main>

@@ -14,7 +14,7 @@
 		<TextPanel {content} {prev} {next} />
 	</div>
 
-	<div class="flex h-1/2 flex-col divide-y divide-slate-700 md:h-full md:w-1/2">
+	<div class="flex h-1/2 flex-col divide-y divide-neutral-700 md:h-full md:w-1/2">
 		<section></section>
 	</div>
 </main>
