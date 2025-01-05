@@ -9,7 +9,7 @@
 </script>
 
 <main
-	class="flex h-full w-full flex-col divide-y divide-neutral-700 md:flex-row
+	class="flex min-h-0 grow flex-col divide-y divide-neutral-700 md:flex-row
     md:divide-x md:divide-y-0"
 >
 	<div class="h-1/2 md:h-full md:w-1/2">

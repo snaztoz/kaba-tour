@@ -11,8 +11,11 @@
 			'&': {
 				height: '100%',
 				backgroundColor: '#171717',
-				fontSize: '14px',
+				fontSize: '15px',
 				color: '#a3a3a3'
+			},
+			'.cm-scroller': {
+				lineHeight: '24px'
 			},
 			'.cm-gutters': {
 				backgroundColor: '#171717',
