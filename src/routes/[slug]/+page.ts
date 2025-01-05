@@ -1,4 +1,6 @@
+import array from '../../data/array.md?raw';
 import conditional from '../../data/conditional.md?raw';
+import eachLoop from '../../data/each-loop.md?raw';
 import helloWorld from '../../data/hello-world.md?raw';
 import notFound from '../../data/not-found.md?raw';
 import variable from '../../data/variable.md?raw';
@@ -30,6 +32,18 @@ const posts = [
 		slug: 'while-loop',
 		content: whileLoop,
 		prev: '/conditional',
+		next: '/array',
+	},
+	{
+		slug: 'array',
+		content: array,
+		prev: '/while-loop',
+		next: '/each-loop'
+	},
+	{
+		slug: 'each-loop',
+		content: eachLoop,
+		prev: '/array',
 	},
 ];
 
