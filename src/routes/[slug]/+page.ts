@@ -16,25 +16,25 @@ const posts = [
 		slug: 'hello-world',
 		content: helloWorld,
 		prev: '/',
-		next: '/variable',
+		next: '/variable'
 	},
 	{
 		slug: 'variable',
 		content: variable,
 		prev: '/hello-world',
-		next: '/conditional',
+		next: '/conditional'
 	},
 	{
 		slug: 'conditional',
 		content: conditional,
 		prev: '/variable',
-		next: '/while-loop',
+		next: '/while-loop'
 	},
 	{
 		slug: 'while-loop',
 		content: whileLoop,
 		prev: '/conditional',
-		next: '/array',
+		next: '/array'
 	},
 	{
 		slug: 'array',
@@ -46,19 +46,19 @@ const posts = [
 		slug: 'each-loop',
 		content: eachLoop,
 		prev: '/array',
-		next: '/function',
+		next: '/function'
 	},
 	{
 		slug: 'function',
 		content: fn,
 		prev: '/each-loop',
-		next: '/function-advanced',
+		next: '/function-advanced'
 	},
 	{
 		slug: 'function-advanced',
 		content: fnAdvanced,
-		prev: '/function',
-	},
+		prev: '/function'
+	}
 ];
 
 export const load: PageLoad = async ({ params }) => {

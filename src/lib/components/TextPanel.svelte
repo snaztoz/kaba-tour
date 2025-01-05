@@ -12,23 +12,27 @@
 </script>
 
 <section class="flex h-full flex-col">
-	<header class="flex items-center gap-4 border-b border-slate-700 bg-slate-900 px-4 py-2">
-		<button class="rounded p-2 hover:bg-slate-800 hover:text-slate-300">
+	<header
+		class="flex items-center gap-4 border-b border-neutral-200 bg-emerald-600
+			px-4 py-1 text-white"
+	>
+		<button class="rounded p-2 transition-colors hover:bg-emerald-500">
 			<Menu />
 		</button>
 
-		<h2 class="text-xl">Tour de Kaba</h2>
+		<h2 class="text-xl font-bold">Tour de Kaba</h2>
 	</header>
 
-	<div class="grow overflow-y-auto !w-full px-4 py-6">
+	<div class="!w-full grow overflow-y-auto px-4 py-6">
 		<div
-			class="prose prose-slate prose-invert prose-h1:text-3xl prose-h1:font-bold"
+			class="prose prose-h1:text-3xl prose-h1:font-bold
+			prose-pre:border prose-pre:bg-neutral-100 prose-pre:text-neutral-600"
 		>
 			{@html content}
 		</div>
 	</div>
 
-	<footer class="px-4 py-2 border-t border-slate-700">
+	<footer class="border-t border-neutral-200 px-4 py-2">
 		<TextPanelNavigation {prev} {next} />
 	</footer>
 </section>
