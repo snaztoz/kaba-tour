@@ -1,3 +1,4 @@
+import conditional from '../../data/conditional.md?raw';
 import helloWorld from '../../data/hello-world.md?raw';
 import notFound from '../../data/not-found.md?raw';
 import variable from '../../data/variable.md?raw';
@@ -10,12 +11,18 @@ const posts = [
 		slug: 'hello-world',
 		content: helloWorld,
 		prev: '/',
-		next: '/variable'
+		next: '/variable',
 	},
 	{
 		slug: 'variable',
 		content: variable,
-		prev: '/hello-world'
+		prev: '/hello-world',
+		next: '/conditional',
+	},
+	{
+		slug: 'conditional',
+		content: conditional,
+		prev: '/variable',
 	}
 ];
 

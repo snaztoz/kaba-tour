@@ -20,14 +20,15 @@
 		<h2 class="text-xl">Tour de Kaba</h2>
 	</header>
 
-	<div
-		class="prose prose-slate prose-invert grow overflow-y-auto px-4 py-6
-      prose-h1:text-3xl prose-h1:font-bold"
-	>
-		{@html content}
+	<div class="grow overflow-y-auto !w-full px-4 py-6">
+		<div
+			class="prose prose-slate prose-invert prose-h1:text-3xl prose-h1:font-bold"
+		>
+			{@html content}
+		</div>
 	</div>
 
-	<footer class="p-4">
+	<footer class="px-4 py-2 border-t border-slate-700">
 		<TextPanelNavigation {prev} {next} />
 	</footer>
 </section>
