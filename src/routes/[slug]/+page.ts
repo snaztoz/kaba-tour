@@ -2,6 +2,7 @@ import conditional from '../../data/conditional.md?raw';
 import helloWorld from '../../data/hello-world.md?raw';
 import notFound from '../../data/not-found.md?raw';
 import variable from '../../data/variable.md?raw';
+import whileLoop from '../../data/while-loop.md?raw';
 import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
 import type { PageLoad } from './$types';
@@ -23,7 +24,13 @@ const posts = [
 		slug: 'conditional',
 		content: conditional,
 		prev: '/variable',
-	}
+		next: '/while-loop',
+	},
+	{
+		slug: 'while-loop',
+		content: whileLoop,
+		prev: '/conditional',
+	},
 ];
 
 export const load: PageLoad = async ({ params }) => {
