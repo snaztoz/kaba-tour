@@ -26,7 +26,7 @@
 						text-white transition-colors hover:text-red-500"
 				>
 					Next
-					<ChevronRight />
+					<ChevronRight size={20} />
 				</a>
 			{/if}
 		</nav>
