@@ -4,7 +4,7 @@ import { posts } from './posts';
 export const pages = [
 	{
 		slug: '/',
-		title: 'Home'
+		title: 'Welcome'
 	},
 	...posts.map((post) => ({
 		slug: post.slug,
