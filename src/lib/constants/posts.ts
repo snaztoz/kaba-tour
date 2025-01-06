@@ -10,6 +10,8 @@ import eachLoop from '../../data/each-loop.md?raw';
 import eachLoopCode from '../../data/code/each-loop.txt?raw';
 import fnAdvanced from '../../data/function-advanced.md?raw';
 import fnAdvancedCode from '../../data/code/function-advanced.txt?raw';
+import fnParameters from '../../data/function-parameters.md?raw';
+import fnParametersCode from '../../data/code/function-parameters.txt?raw';
 import fn from '../../data/function.md?raw';
 import fnCode from '../../data/code/function.txt?raw';
 import helloWorld from '../../data/hello-world.md?raw';
@@ -64,6 +66,11 @@ export const posts = [
 		slug: 'function',
 		content: fn,
 		code: fnCode
+	},
+	{
+		slug: 'function-parameters',
+		content: fnParameters,
+		code: fnParametersCode
 	},
 	{
 		slug: 'function-advanced',

@@ -1,6 +1,6 @@
 # Function
 
-To create a custom function, use the `fn` keyword:
+To define a function, use the `fn` keyword:
 
 ```text
 fn greet() {
