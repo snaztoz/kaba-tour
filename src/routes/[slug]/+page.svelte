@@ -5,8 +5,12 @@
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
-	let { content, code, prev, next } = $derived(data);
+	let { title, content, code, prev, next } = $derived(data);
 </script>
+
+<svelte:head>
+	<title>{title} | Tour de Kaba</title>
+</svelte:head>
 
 <main
 	class="flex min-h-0 grow flex-col divide-y divide-neutral-700 md:flex-row

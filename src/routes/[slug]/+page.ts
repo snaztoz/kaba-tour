@@ -2,6 +2,7 @@ import notFound from '../../data/not-found.md?raw';
 import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
 import { posts } from '$lib/constants/posts';
+import { startCase } from 'lodash-es';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
@@ -14,6 +15,7 @@ export const load: PageLoad = async ({ params }) => {
 	const next = i < posts.length - 1 ? posts[i + 1].slug : undefined;
 
 	return {
+		title: startCase(posts[i].slug),
 		slug: posts[i].slug,
 		content: await marked.parse(posts[i].content),
 		code: posts[i].code,
