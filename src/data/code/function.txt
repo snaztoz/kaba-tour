@@ -1,7 +1,7 @@
 fn main() {
-    debug add_two(5);
+    greet();
 }
 
-fn add_two(n: int): int {
-    return n + 2;
+fn greet() {
+    debug "Hello, user!";
 }

@@ -2,16 +2,9 @@ fn main() {
     var i = 0;
 
     while i < 10 {
-        if i == 3 {
-            continue;
-        }
-
-        if i == 7 {
-            break;
-        }
-
         debug i * 2;
 
+        // don't forget to increment the value😉
         i += 1;
     }
 }

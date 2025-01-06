@@ -1,7 +1,11 @@
 import array from '../../data/array.md?raw';
 import arrayCode from '../../data/code/array.txt?raw';
+import arrayManipulation from '../../data/array-manipulation.md?raw';
+import arrayManipulationCode from '../../data/code/array-manipulation.txt?raw';
 import conditional from '../../data/conditional.md?raw';
 import conditionalCode from '../../data/code/conditional.txt?raw';
+import continueAndBreakLoop from '../../data/continue-and-break-loop.md?raw';
+import continueAndBreakLoopCode from '../../data/code/continue-and-break-loop.txt?raw';
 import eachLoop from '../../data/each-loop.md?raw';
 import eachLoopCode from '../../data/code/each-loop.txt?raw';
 import fnAdvanced from '../../data/function-advanced.md?raw';
@@ -37,9 +41,19 @@ export const posts = [
 		code: whileLoopCode
 	},
 	{
+		slug: 'continue-and-break-loop',
+		content: continueAndBreakLoop,
+		code: continueAndBreakLoopCode
+	},
+	{
 		slug: 'array',
 		content: array,
 		code: arrayCode
+	},
+	{
+		slug: 'array-manipulation',
+		content: arrayManipulation,
+		code: arrayManipulationCode
 	},
 	{
 		slug: 'each-loop',

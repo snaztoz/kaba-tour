@@ -10,4 +10,4 @@ each n in nums {
 }
 ```
 
-`continue` and `break` statements are also can be used here.
+The `continue` and `break` statements can also be used here.
