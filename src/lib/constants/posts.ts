@@ -8,12 +8,14 @@ import continueAndBreakLoop from '../../data/continue-and-break-loop.md?raw';
 import continueAndBreakLoopCode from '../../data/code/continue-and-break-loop.txt?raw';
 import eachLoop from '../../data/each-loop.md?raw';
 import eachLoopCode from '../../data/code/each-loop.txt?raw';
-import fnAdvanced from '../../data/function-advanced.md?raw';
-import fnAdvancedCode from '../../data/code/function-advanced.txt?raw';
 import fnParameters from '../../data/function-parameters.md?raw';
 import fnParametersCode from '../../data/code/function-parameters.txt?raw';
 import fnReturnValue from '../../data/function-return-value.md?raw';
 import fnReturnValueCode from '../../data/code/function-return-value.txt?raw';
+import fnType1 from '../../data/function-type-1.md?raw';
+import fnType1Code from '../../data/code/function-type-1.txt?raw';
+import fnType2 from '../../data/function-type-2.md?raw';
+import fnType2Code from '../../data/code/function-type-2.txt?raw';
 import fn from '../../data/function.md?raw';
 import fnCode from '../../data/code/function.txt?raw';
 import helloWorld from '../../data/hello-world.md?raw';
@@ -80,8 +82,13 @@ export const posts = [
 		code: fnReturnValueCode
 	},
 	{
-		slug: 'function-advanced',
-		content: fnAdvanced,
-		code: fnAdvancedCode
+		slug: 'function-type-1',
+		content: fnType1,
+		code: fnType1Code
+	},
+	{
+		slug: 'function-type-2',
+		content: fnType2,
+		code: fnType2Code
 	}
 ];
