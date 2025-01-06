@@ -5,7 +5,7 @@
 
 	interface Props {
 		content: string;
-		code: string;
+		code?: string;
 		prev: string;
 		next?: string;
 	}
@@ -24,9 +24,11 @@
 	</div>
 
 	<div class="relative h-1/2 md:h-full md:w-1/2">
-		<div class="flex h-full flex-col overflow-y-auto">
-			<CodePanel {code} update={(s) => (code = s)} />
-		</div>
-		<ResultPanel reset={() => (code = initialCode)} />
+		{#if code}
+			<div class="flex h-full flex-col overflow-y-auto">
+				<CodePanel {code} update={(s) => (code = s)} />
+			</div>
+			<ResultPanel reset={() => (code = initialCode)} />
+		{/if}
 	</div>
 </main>

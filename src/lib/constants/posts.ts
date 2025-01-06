@@ -8,6 +8,7 @@ import continueAndBreakLoop from '../../data/continue-and-break-loop.md?raw';
 import continueAndBreakLoopCode from '../../data/code/continue-and-break-loop.txt?raw';
 import eachLoop from '../../data/each-loop.md?raw';
 import eachLoopCode from '../../data/code/each-loop.txt?raw';
+import end from '../../data/end.md?raw';
 import fnParameters from '../../data/function-parameters.md?raw';
 import fnParametersCode from '../../data/code/function-parameters.txt?raw';
 import fnReturnValue from '../../data/function-return-value.md?raw';
@@ -90,5 +91,9 @@ export const posts = [
 		slug: 'function-type-2',
 		content: fnType2,
 		code: fnType2Code
+	},
+	{
+		slug: 'end',
+		content: end
 	}
 ];
