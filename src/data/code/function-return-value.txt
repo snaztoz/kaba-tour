@@ -1,0 +1,7 @@
+fn main() {
+    debug get_num();
+}
+
+fn get_num(): int {
+    return 5;
+}

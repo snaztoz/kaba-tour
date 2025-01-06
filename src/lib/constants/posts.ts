@@ -12,6 +12,8 @@ import fnAdvanced from '../../data/function-advanced.md?raw';
 import fnAdvancedCode from '../../data/code/function-advanced.txt?raw';
 import fnParameters from '../../data/function-parameters.md?raw';
 import fnParametersCode from '../../data/code/function-parameters.txt?raw';
+import fnReturnValue from '../../data/function-return-value.md?raw';
+import fnReturnValueCode from '../../data/code/function-return-value.txt?raw';
 import fn from '../../data/function.md?raw';
 import fnCode from '../../data/code/function.txt?raw';
 import helloWorld from '../../data/hello-world.md?raw';
@@ -71,6 +73,11 @@ export const posts = [
 		slug: 'function-parameters',
 		content: fnParameters,
 		code: fnParametersCode
+	},
+	{
+		slug: 'function-return-value',
+		content: fnReturnValue,
+		code: fnReturnValueCode
 	},
 	{
 		slug: 'function-advanced',
