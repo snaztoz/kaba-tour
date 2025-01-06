@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { EditorState } from '@codemirror/state';
-	import { EditorView, gutter, keymap, lineNumbers } from '@codemirror/view';
-	import { defaultKeymap, indentWithTab } from '@codemirror/commands';
-	import { indentUnit } from '@codemirror/language';
+	import CodeMirror from 'svelte-codemirror-editor';
+	import { EditorView } from '@codemirror/view';
 
-	let { initialCode }: { initialCode: string } = $props();
+	interface Props {
+		code: string;
+		update: (newCode: string) => void;
+	}
 
-	let editor: HTMLDivElement;
-	let view: EditorView;
+	let { code, update }: Props = $props();
 
 	const theme = EditorView.theme(
 		{
@@ -38,28 +38,8 @@
 		},
 		{ dark: true }
 	);
-
-	$effect(() => {
-		let startState = EditorState.create({
-			doc: initialCode,
-			extensions: [
-				theme,
-				lineNumbers(),
-				gutter({}),
-				indentUnit.of('    '),
-				keymap.of([...defaultKeymap, indentWithTab])
-			]
-		});
-
-		view = new EditorView({
-			state: startState,
-			parent: editor
-		});
-
-		return () => view.destroy();
-	});
 </script>
 
 <section class="grow">
-	<div bind:this={editor} class="h-full"></div>
+	<CodeMirror value={code} {theme} tabSize={4} class="h-full" on:change={(s) => update(s.detail)} />
 </section>

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Play from 'lucide-svelte/icons/play';
 	import RotateCcw from 'lucide-svelte/icons/rotate-ccw';
+
+	let { reset }: { reset: () => void } = $props();
 </script>
 
 <section class="absolute inset-x-0 bottom-0">
@@ -8,6 +10,7 @@
 		<button
 			class="flex select-none items-center gap-2 rounded bg-neutral-600 px-4 py-2
         text-neutral-200 transition-colors hover:bg-neutral-700"
+			onclick={() => reset()}
 		>
 			<RotateCcw />
 			Reset
