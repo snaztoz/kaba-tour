@@ -25,6 +25,9 @@ export const theme = EditorView.theme(
 			paddingLeft: '0.75rem',
 			paddingRight: '0.75rem',
 			userSelect: 'none'
+		},
+		'& .cm-content .cm-activeLine': {
+			backgroundColor: 'transparent'
 		}
 	},
 	{ dark: true }

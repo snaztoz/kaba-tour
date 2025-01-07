@@ -12,4 +12,4 @@ If you need to use a specific type, we can also provide a type notation when cre
 var x: short = 10;
 ```
 
-Read more about all available Kaba data types [here](https://github.com/snaztoz/kaba/blob/main/docs/features.md#data-types).
+Read more about all available data types [here](https://github.com/snaztoz/kaba/blob/main/docs/features.md#data-types).
