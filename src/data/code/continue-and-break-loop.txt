@@ -2,6 +2,8 @@ fn main() {
     var i = 0;
 
     while i < 10 {
+        i += 1;
+
         if i == 3 {
             continue;
         } else if i == 7 {
@@ -9,6 +11,5 @@ fn main() {
         }
 
         debug i * 2;
-        i += 1;
     }
 }

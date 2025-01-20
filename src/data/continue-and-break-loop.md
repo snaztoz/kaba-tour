@@ -6,10 +6,11 @@ There are also the `continue` and `break` statements to skip and exit from a loo
 var i = 0;
 
 while i < 10 {
+    i += 1;
+
     if i == 3 { continue; }
     if i == 7 { break; }
 
     debug i * 2;
-    i += 1;
 }
 ```
