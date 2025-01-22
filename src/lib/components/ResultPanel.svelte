@@ -1,27 +1,33 @@
 <script lang="ts">
-	import Play from 'lucide-svelte/icons/play';
-	import RotateCcw from 'lucide-svelte/icons/rotate-ccw';
+	import Close from 'lucide-svelte/icons/x';
 
-	let { reset }: { reset: () => void } = $props();
+	interface Props {
+		stdout: string;
+		stderr: string;
+		clearOutput: () => void;
+	}
+
+	let { stdout, stderr, clearOutput }: Props = $props();
 </script>
 
-<section class="absolute inset-x-0 bottom-0">
-	<header class="flex justify-end gap-4 px-4 py-2 md:px-8">
-		<button
-			class="flex select-none items-center gap-2 rounded bg-neutral-600 px-4 py-2
-        text-neutral-200 transition-colors hover:bg-neutral-700"
-			onclick={() => reset()}
-		>
-			<RotateCcw />
-			Reset
-		</button>
-
-		<button
-			class="flex select-none items-center gap-2 rounded bg-red-700 px-4 py-2
-        text-red-100 transition-colors hover:bg-red-800"
-		>
-			<Play />
-			Run
-		</button>
-	</header>
-</section>
+{#if stdout || stderr}
+	<section class="h-1/2 shrink-0">
+		<div class="flex h-full flex-col gap-1.5 bg-neutral-800 px-4 py-2">
+			<div class="flex items-center gap-2 text-neutral-600">
+				<button onclick={clearOutput}>
+					<Close size={16} class="hover:text-neutral-500" />
+				</button>
+				<h3 class="select-none text-xs uppercase tracking-wide">output</h3>
+			</div>
+			<div class="grow overflow-y-auto rounded bg-neutral-900 p-2 font-mono text-neutral-400">
+				{@html stdout}
+				{#if stderr}
+					<p>
+						<span class="text-red-500">error: </span>
+						<span>{stderr}</span>
+					</p>
+				{/if}
+			</div>
+		</div>
+	</section>
+{/if}
