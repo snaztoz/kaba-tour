@@ -1,0 +1,9 @@
+fn main() {
+    var f = get_two;
+
+    debug f();
+}
+
+fn get_two(): int {
+    return 2;
+}

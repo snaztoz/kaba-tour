@@ -1,13 +1,10 @@
 <script lang="ts">
 	import TextPanel from '$lib/components/TextPanel.svelte';
-	import type { PageData } from './$types';
-
-	let { data }: { data: PageData } = $props();
-	let { content, next } = $derived(data);
+	import { page } from '$app/state';
 </script>
 
 <svelte:head>
-	<title>Welcome | Tour de Kaba</title>
+	<title>Page Not Found | Tour de Kaba</title>
 </svelte:head>
 
 <main
@@ -15,7 +12,7 @@
     md:divide-x md:divide-y-0"
 >
 	<div class="h-1/2 md:h-full md:w-1/2">
-		<TextPanel {content} {next} />
+		<TextPanel content={page.error!.message} />
 	</div>
 
 	<div class="flex h-1/2 flex-col divide-y divide-neutral-700 md:h-full md:w-1/2">

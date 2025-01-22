@@ -1,0 +1,19 @@
+{
+	"name": "kaba2js",
+	"type": "module",
+	"collaborators": [
+		"Hafidh Muqsithanova Sukarno <hafidhmn@gmail.com>"
+	],
+	"version": "0.5.2",
+	"license": "Apache-2.0",
+	"files": [
+		"kaba2js_bg.wasm",
+		"kaba2js.js",
+		"kaba2js.d.ts"
+	],
+	"main": "kaba2js.js",
+	"types": "kaba2js.d.ts",
+	"sideEffects": [
+		"./snippets/*"
+	]
+}

@@ -1,11 +1,17 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts,md}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				...defaultTheme.fontFamily,
+				sans: ['Inter', ...defaultTheme.fontFamily.sans]
+			}
+		}
 	},
 
 	plugins: [typography]

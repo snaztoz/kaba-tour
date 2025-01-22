@@ -1,0 +1,7 @@
+fn main() {
+    var a = 10;
+    debug a;
+
+    var b: short = 10;
+    debug b;
+}

@@ -1,0 +1,7 @@
+fn main() {
+    if 10 > 50 {
+        debug "Nope";
+    } else {
+        debug "Yes!";
+    }
+}

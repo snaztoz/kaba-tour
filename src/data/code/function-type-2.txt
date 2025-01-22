@@ -1,0 +1,13 @@
+fn main() {
+    var f = getter();
+
+    debug f();
+}
+
+fn getter(): () -> int {
+    return get_two;
+}
+
+fn get_two(): int {
+    return 2;
+}

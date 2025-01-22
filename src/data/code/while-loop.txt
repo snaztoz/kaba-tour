@@ -1,0 +1,10 @@
+fn main() {
+    var i = 0;
+
+    while i < 10 {
+        debug i * 2;
+
+        // don't forget to increment the value😉
+        i += 1;
+    }
+}

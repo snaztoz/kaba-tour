@@ -1,0 +1,7 @@
+fn main() {
+    greet();
+}
+
+fn greet() {
+    debug "Hello, user!";
+}
