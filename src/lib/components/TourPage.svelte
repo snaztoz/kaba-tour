@@ -118,7 +118,7 @@
 	</div>
 
 	<div class="relative h-1/2 md:h-full md:w-1/2">
-		{#if code}
+		{#if code !== undefined}
 			<div class="flex h-full flex-col">
 				<div class="grow overflow-y-auto">
 					<CodePanel
