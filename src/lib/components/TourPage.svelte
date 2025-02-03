@@ -2,7 +2,7 @@
 	import CodePanel from './CodePanel.svelte';
 	import ResultPanel from './ResultPanel.svelte';
 	import TextPanel from './TextPanel.svelte';
-	import init, { compile } from '$lib/compiler/kaba2js';
+	import init, { compile } from '$lib/kaba2js/kaba2js';
 
 	interface Props {
 		content: string;
